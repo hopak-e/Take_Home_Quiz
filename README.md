@@ -1,4 +1,4 @@
-# Take_Home_Quiz
+# 유나엔코스_Take_Home_Quiz_박상호
 # 실행 방법
 
 ```
@@ -12,6 +12,10 @@ yarn dev
 -   React
 -   styled-components
 -   Axios
+
+# 환전 계산기 만들기
+- 더미 데이터를 이용하여 환전하고싶은 나라를 선택하면 해당 나라와 통화가 입력되고, From=기준 나라, To=환전 할 나라로 설정하였고, From은 1로 고정입니다.
+![유나엔코스](https://user-images.githubusercontent.com/97100045/221408851-6c93b370-02f2-4688-a372-fa8a983fddc8.gif)
 
 # 디렉토리 구조
 ```
