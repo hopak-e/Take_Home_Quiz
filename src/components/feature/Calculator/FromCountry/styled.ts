@@ -24,3 +24,8 @@ export const Country = styled.div`
   padding: 1rem;
   justify-content: right;
 `;
+
+export const Img = styled.img<{ isToggled: boolean }>`
+  width: 12px;
+  transform: scaleY(${(props) => (props.isToggled ? -1 : 1)});
+`;

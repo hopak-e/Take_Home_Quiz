@@ -4,6 +4,7 @@ import * as S from "./styled";
 import { Country } from "types/country";
 import DropDown from "components/shared/DropDown/DropDown";
 import CurrencyData from "constants/CurrencyData";
+import arrow from "assets/downArrow.png";
 
 interface Props {
   fromCountry: Country;
@@ -32,7 +33,8 @@ const FromCountry = ({ ...props }: Props) => {
       <S.Unit>{FROM_RATE}</S.Unit>
       <S.Country onClick={handleCountryClick}>
         {props.fromCountry.country}&nbsp;&nbsp;
-        {props.fromCountry.unit}
+        {props.fromCountry.unit}&nbsp;
+        <S.Img src={arrow} isToggled={isToggled} />
         {isToggled && <DropDown handleDropDownClick={handleDropDownClick} />}
       </S.Country>
     </S.Container>

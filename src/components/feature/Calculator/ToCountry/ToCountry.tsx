@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 import * as S from "./styled";
-import { Country } from "../../../../types/country";
-import DropDown from "../../../shared/DropDown/DropDown";
-import CurrencyData from "../../../../constants/CurrencyData";
+import { Country } from "types/country";
+import DropDown from "components/shared/DropDown/DropDown";
+import CurrencyData from "constants/CurrencyData";
+import arrow from "assets/downArrow.png";
 
 interface Props {
   toCountry: Country;
@@ -31,7 +32,8 @@ const ToCountry = ({ ...props }: Props) => {
       <S.Unit>{props.toRate}</S.Unit>
       <S.Country onClick={handleClick}>
         {props.toCountry.country}&nbsp;&nbsp;
-        {props.toCountry.unit}
+        {props.toCountry.unit}&nbsp;
+        <S.Img src={arrow} isToggled={isToggled} />
         {isToggled && <DropDown handleDropDownClick={handleDropDownClick} />}
       </S.Country>
     </S.Container>
