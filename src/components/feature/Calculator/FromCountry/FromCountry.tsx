@@ -34,6 +34,7 @@ const FromCountry = ({ ...props }: Props) => {
     <S.Container>
       <S.Unit>
         <S.Input
+          type="number"
           onChange={props.handleFromValueChange}
           value={props.fromValue}
         />

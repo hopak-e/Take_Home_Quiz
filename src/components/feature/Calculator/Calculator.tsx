@@ -38,21 +38,23 @@ const Calculator = () => {
   const handleFromValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target.value;
     if (target === "") {
-      setFromValue(1);
+      setFromValue(0);
+      setToValue(0);
     } else {
       setFromValue(parseInt(target));
+      setToValue(Number((toRate * Number(target)).toFixed(2)));
     }
-    setToValue(Number((toRate * Number(target)).toFixed(2)));
   };
 
   const handleToValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target.value;
     if (target === "") {
-      setToValue(fromValue * toRate);
+      setToValue(0);
+      setFromValue(0);
     } else {
       setToValue(parseInt(target));
+      setFromValue(Number((Number(target) / toRate).toFixed(2)));
     }
-    setFromValue(Number((Number(target) / toRate).toFixed(2)));
   };
 
   return (

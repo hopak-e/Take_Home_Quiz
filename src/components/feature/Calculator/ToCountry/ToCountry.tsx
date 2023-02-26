@@ -33,7 +33,11 @@ const ToCountry = ({ ...props }: Props) => {
   return (
     <S.Container>
       <S.Unit>
-        <S.Input onChange={props.handleToValueChange} value={props.toValue} />
+        <S.Input
+          type="number"
+          onChange={props.handleToValueChange}
+          value={props.toValue}
+        />
       </S.Unit>
       <S.Country onClick={handleClick}>
         {props.toCountry.country}&nbsp;&nbsp;
