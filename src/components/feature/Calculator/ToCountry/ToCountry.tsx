@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import * as S from "./styled";
-import { Country } from "../../../types/country";
-import DropDown from "../../shared/DropDown/DropDown";
-import CurrencyData from "../../../constants/CurrencyData";
+import { Country } from "../../../../types/country";
+import DropDown from "../../../shared/DropDown/DropDown";
+import CurrencyData from "../../../../constants/CurrencyData";
 
 interface Props {
   toCountry: Country;

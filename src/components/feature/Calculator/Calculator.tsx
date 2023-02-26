@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 import * as S from "./styled";
-import FromCountry from "../FromCountry/FromCountry";
-import CurrencyData from "../../../constants/CurrencyData";
-import getCurrency from "../../../apis/Calculator/Currency";
-import ToCountry from "../ToCountry/ToCountry";
+import FromCountry from "./FromCountry/FromCountry";
+import CurrencyData from "constants/CurrencyData";
+import getCurrency from "apis/Calculator/Currency";
+import ToCountry from "./ToCountry/ToCountry";
 
 const Calculator = () => {
   const [fromCountry, setFromCountry] = useState({

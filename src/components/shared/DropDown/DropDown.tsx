@@ -1,4 +1,4 @@
-import CurrencyData from "../../../constants/CurrencyData";
+import CurrencyData from "constants/CurrencyData";
 import * as S from "./styled";
 
 interface Props {
