@@ -10,6 +10,9 @@ interface Props {
   toCountry: Country;
   setToCountry: React.Dispatch<React.SetStateAction<Country>>;
   toRate: number;
+  handleToValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  toValue: number;
+  setToValue: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const ToCountry = ({ ...props }: Props) => {
@@ -29,7 +32,9 @@ const ToCountry = ({ ...props }: Props) => {
 
   return (
     <S.Container>
-      <S.Unit>{props.toRate}</S.Unit>
+      <S.Unit>
+        <S.Input onChange={props.handleToValueChange} value={props.toValue} />
+      </S.Unit>
       <S.Country onClick={handleClick}>
         {props.toCountry.country}&nbsp;&nbsp;
         {props.toCountry.unit}&nbsp;

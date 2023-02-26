@@ -9,9 +9,11 @@ import arrow from "assets/downArrow.png";
 interface Props {
   fromCountry: Country;
   setFromCountry: React.Dispatch<React.SetStateAction<Country>>;
+  toRate: number;
+  handleFromValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  fromValue: number;
+  setFromValue: React.Dispatch<React.SetStateAction<number>>;
 }
-
-const FROM_RATE = 1;
 
 const FromCountry = ({ ...props }: Props) => {
   const [isToggled, setIsToggled] = useState(false);
@@ -30,7 +32,12 @@ const FromCountry = ({ ...props }: Props) => {
 
   return (
     <S.Container>
-      <S.Unit>{FROM_RATE}</S.Unit>
+      <S.Unit>
+        <S.Input
+          onChange={props.handleFromValueChange}
+          value={props.fromValue}
+        />
+      </S.Unit>
       <S.Country onClick={handleCountryClick}>
         {props.fromCountry.country}&nbsp;&nbsp;
         {props.fromCountry.unit}&nbsp;

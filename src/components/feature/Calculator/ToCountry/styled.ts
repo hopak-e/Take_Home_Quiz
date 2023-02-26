@@ -11,7 +11,11 @@ export const Container = styled.div`
 export const Unit = styled.div`
   display: flex;
   flex: 1;
-  padding: 1rem;
+  padding: 0.5rem;
+`;
+
+export const Input = styled.input`
+  border: none;
   border-right: 1px solid gray;
 `;
 
