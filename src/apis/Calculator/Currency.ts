@@ -1,5 +1,4 @@
 import axiosInstance from "./../Instance";
-import axios from "axios";
 
 const instance = axiosInstance();
 
